@@ -18,8 +18,10 @@
     'data': [
 
         # Views
-        'views/physician_degree.xml'
+        'views/physician_degree.xml',
 
+        # Menu
+        'views/menu.xml'
     ],
     'demo': [
         'demo/demo.xml',
