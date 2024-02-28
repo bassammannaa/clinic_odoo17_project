@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="clinic_physician_degree_form_view" model="ir.ui.view">
+            <field name="name">Physician Degree</field>
+            <field name="model">clinic.physician.degree</field>
+            <field name="arch" type="xml">
+                <form string="Physician Degree">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="clinic_physician_degree_tree_view" model="ir.ui.view">
+            <field name="name">Physician Degree</field>
+            <field name="model">clinic.physician.degree</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="clinic_physician_degree_action_view" model="ir.actions.act_window">
+            <field name="name">Physician Degree</field>
+            <field name="res_model">clinic.physician.degree</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    <!-- Add Text Here -->
+                </p>
+                <p>
+                    <!-- More details about what a user can do with this object will be OK -->
+                </p>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

@@ -16,8 +16,10 @@
     'version': '0.1',
     'depends': ['base'],
     'data': [
-        'views/views.xml',
-        'views/templates.xml',
+
+        # Views
+        'views/physician_degree.xml'
+
     ],
     'demo': [
         'demo/demo.xml',
