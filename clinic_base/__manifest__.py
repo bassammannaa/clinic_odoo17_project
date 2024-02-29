@@ -20,6 +20,10 @@
         'security/clinic_security.xml',
         'security/ir.model.access.csv',
 
+        # data
+        'data/physician_degree_data.xml',
+
+
         # Views
         'views/physician_degree.xml',
 
