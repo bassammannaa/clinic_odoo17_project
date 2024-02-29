@@ -16,6 +16,9 @@
     'version': '0.1',
     'depends': ['base'],
     'data': [
+        # Security
+        'security/clinic_security.xml',
+        'security/ir.model.access.csv',
 
         # Views
         'views/physician_degree.xml',
@@ -28,12 +31,10 @@
     ],
     'images': [
         'static/description/icon.png'
-        ],
+    ],
     'installable': True,
     'application': True,
     'sequence': 1,
     'price': 36,
     'currency': 'USD',
 }
-
-
