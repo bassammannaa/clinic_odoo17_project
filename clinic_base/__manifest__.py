@@ -28,6 +28,7 @@
         # Views
         'views/physician_degree.xml',
         'views/physician_speciality.xml',
+        'views/physician.xml',
 
         # Menu
         'views/menu.xml'

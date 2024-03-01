@@ -1,25 +1,23 @@
+    _sql_constraints = [
+        ('name_uniq', 'UNIQUE(name)', 'Name must be unique!'),
+    ]
 
-        <!-- Physician Specialty -->
-        <record id="physician_specialty_0" model="physician.specialty">
-            <field name="code">CAD</field>
-            <field name="name">Cardiologist</field>
-        </record>
-        <record id="physician_specialty_1" model="physician.specialty">
-            <field name="code">URO</field>
-            <field name="name">Urologist</field>
-        </record>
-        <record id="physician_specialty_2" model="physician.specialty">
-            <field name="code">NEU</field>
-            <field name="name">Neurologist</field>
-        </record>
-        <record id="physician_specialty_3" model="physician.specialty">
-            <field name="code">ORT</field>
-            <field name="name">Orthopaedic</field>
-        </record>
-        <record id="physician_specialty_4" model="physician.specialty">
-            <field name="code">PAE</field>
-            <field name="name">Paediatric</field>
-        </record>
+    _sql_constraints = [
+        ('name_uniq', 'UNIQUE(code, name)', 'Code and Name must be unique!'),
+    ]
 
 
+    _sql_constraints = [
+        ('name_unique', 'UNIQUE(model, name)', "Field names must be unique per model."),
+        ('size_gt_zero', 'CHECK (size>=0)', 'Size of the field cannot be negative.'),
+        (
+            "name_manual_field",
+            "CHECK (state != 'manual' OR name LIKE 'x\\_%')",
+            "Custom fields must have a name that starts with 'x_'!"
+        ),
+    ]
 
+    _sql_constraints = [
+        ('name_nospaces', "CHECK(name NOT LIKE '% %')",
+         "External IDs cannot contain spaces"),
+    ]

@@ -8,35 +8,27 @@ import datetime
 logger = logging.getLogger(__name__)
 
 
-class PhysicianSpecialty(models.Model):
-    _name = 'clinic.physician.specialty'
-    _rec_name = 'name'
-    _description = 'Physician Specialty'
+class Physician(models.Model):
+    _name = 'clinic.physician'
+    _description = 'Physician'
 
-    code = fields.Char(string="Code",
-                       required=True,
-                       store=True,
-                       readonly=False,
-                       copy=False,
-                       help="Physician Specialty Code", )
     name = fields.Char(string="Name",
                        required=True,
                        store=True,
                        readonly=False,
                        copy=False,
-                       translate=True,
-                       help="Physician Specialty Name", )
-
-    _sql_constraints = [
-        ('name_uniq', 'UNIQUE(name)', 'Name must be unique!'),
-    ]
-
-
+                       help="Physician Name", )
+    medical_license = fields.Char(string="Medical License",
+                       required=False,
+                       store=True,
+                       readonly=False,
+                       copy=False,
+                       help="Medical License", )
 
     @api.model_create_multi
     def create(self, vals):
         try:
-            obj = super(PhysicianSpecialty, self).create(vals)
+            obj = super(Physician, self).create(vals)
         except Exception as e:
             logger.exception("create Method")
             raise ValidationError(e)
@@ -44,7 +36,7 @@ class PhysicianSpecialty(models.Model):
 
     def write(self, vals):
         try:
-            obj = super(PhysicianSpecialty, self).write(vals)
+            obj = super(Physician, self).write(vals)
         except Exception as e:
             logger.exception("Write Method")
             raise ValidationError(e)
@@ -52,7 +44,7 @@ class PhysicianSpecialty(models.Model):
 
     def unlink(self):
         try:
-            return super(PhysicianSpecialty, self).unlink()
+            return super(Physician, self).unlink()
         except Exception as e:
             logger.exception("unlink Method")
             raise ValidationError(e)
