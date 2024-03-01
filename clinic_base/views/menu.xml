@@ -9,10 +9,19 @@
             <menuitem name="Configuration"
                       id="menu_config"
                       sequence="3">
+
                 <menuitem name="Physician Degree"
                         id="menu_physician_degree"
                           action="clinic_physician_degree_action_view"
                           sequence="1"/>
+
+                <menuitem name="Physician Specialty"
+                        id="menu_physician_specialty"
+                          action="clinic_base.clinic_physician_specialty_action_view"
+                          sequence="2"/>
+
+
+
 
             </menuitem>
 

@@ -22,10 +22,12 @@
 
         # data
         'data/physician_degree_data.xml',
+        'data/physician_specialty_data.xml',
 
 
         # Views
         'views/physician_degree.xml',
+        'views/physician_speciality.xml',
 
         # Menu
         'views/menu.xml'

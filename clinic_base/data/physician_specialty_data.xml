@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+
+        <record id="physician_specialty_cardiologist" model="clinic.physician.specialty">
+            <field name="name">Cardiologist</field>
+        </record>
+        <record id="physician_specialty_urologist" model="clinic.physician.specialty">
+            <field name="name">Urologist</field>
+        </record>
+        <record id="physician_specialty_neurologist" model="clinic.physician.specialty">
+            <field name="name">Neurologist</field>
+        </record>
+        <record id="physician_specialty_orthopaedic" model="clinic.physician.specialty">
+            <field name="name">Orthopaedic</field>
+        </record>
+        <record id="physician_specialty_paediatric" model="clinic.physician.specialty">
+            <field name="name">Paediatric</field>
+        </record>
+
+
+    </data>
+</odoo>
