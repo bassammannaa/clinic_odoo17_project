@@ -1,5 +1,25 @@
 
-Specialty
+        <!-- Physician Specialty -->
+        <record id="physician_specialty_0" model="physician.specialty">
+            <field name="code">CAD</field>
+            <field name="name">Cardiologist</field>
+        </record>
+        <record id="physician_specialty_1" model="physician.specialty">
+            <field name="code">URO</field>
+            <field name="name">Urologist</field>
+        </record>
+        <record id="physician_specialty_2" model="physician.specialty">
+            <field name="code">NEU</field>
+            <field name="name">Neurologist</field>
+        </record>
+        <record id="physician_specialty_3" model="physician.specialty">
+            <field name="code">ORT</field>
+            <field name="name">Orthopaedic</field>
+        </record>
+        <record id="physician_specialty_4" model="physician.specialty">
+            <field name="code">PAE</field>
+            <field name="name">Paediatric</field>
+        </record>
 
 
 

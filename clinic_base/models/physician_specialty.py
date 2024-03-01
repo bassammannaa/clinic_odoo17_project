@@ -11,9 +11,25 @@ logger = logging.getLogger(__name__)
 class PhysicianSpecialty(models.Model):
     _name = 'clinic.physician.specialty'
     _rec_name = 'name'
-    _description = 'Store Physician Degrees'
+    _description = 'Physician Specialty'
 
-    name = fields.Char()
+    code = fields.Char(string="Code",
+                       required=True,
+                       store=True,
+                       readonly=False,
+                       copy=False,
+                       help="Physician Specialty Code", )
+    name = fields.Char(string="Name",
+                       required=True,
+                       store=True,
+                       readonly=False,
+                       copy=False,
+                       translate=True,
+                       help="Physician Specialty Name", )
+
+    _sql_constraints = [
+        ('name_uniq', 'UNIQUE(name)', 'Name must be unique!'),
+    ]
 
     @api.model_create_multi
     def create(self, vals):
