@@ -14,7 +14,7 @@
     'category': 'Medical',
     'license': 'OPL-1',
     'version': '0.1',
-    'depends': ['base'],
+    'depends': ['base','mail'],
     'data': [
         # Security
         'security/clinic_security.xml',

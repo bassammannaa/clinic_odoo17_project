@@ -14,6 +14,7 @@ class PhysicianDegree(models.Model):
     _description = 'Store Physician Degrees'
 
     name = fields.Char()
+    # physician_ids = fields.One2many(comodel_name='clinic.physician', inverse_name='user_id', string='Related Physician')
 
     @api.model_create_multi
     def create(self, vals):
